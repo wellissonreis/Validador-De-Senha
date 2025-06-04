@@ -53,7 +53,7 @@ bool ValidatePassword(string senha)
     }
     else
     {
-        Console.WriteLine("Número de caracters inválidos");
+        Console.WriteLine("Número de caracteres inválidos");
     }
     return false;
 }
