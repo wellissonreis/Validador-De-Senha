@@ -4,7 +4,7 @@ bool ValidatePassword(string senha)
     char[] arrSenha = senha.ToCharArray();
     string aux = "Cod->";
 
-    if (arrSenha.Count() > 8)
+    if (arrSenha.Count() >= 8)
     {
         foreach (char c in arrSenha)
         {            
@@ -44,16 +44,16 @@ bool ValidatePassword(string senha)
         }
         else if (aux.Contains('n') == false)
         {
-            Console.WriteLine("Insira ao menos uma um numero!");
+            Console.WriteLine("Insira ao menos um numero!");
         }
         else if (aux.Contains('p') == false)
         {
-            Console.WriteLine("Insira ao menos uma caracter!");
+            Console.WriteLine("Insira ao menos um caracter especial!");
         }
     }
     else
     {
-        Console.WriteLine("Número de caracters inválidos");
+        Console.WriteLine("A senha deve ter pelo menos 8 caracteres!");
     }
     return false;
 }
